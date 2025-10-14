@@ -1,0 +1,21 @@
+{
+    "options": {
+        "env": {
+            "CXX": "clang++"
+        }
+    },
+    "required": {
+        "glew": "*",
+        "boost": "*",
+        "openal": "*",
+        "freealut": "*",
+        "cairomm": "*",
+        "pangomm": "*",
+        "libogg": "*",
+        "libvorbis": "*",
+        "freeimage": "*",
+        "g-truc/glm": "*",
+        "rapidxml": "*",
+        "jsoncpp": "*"
+    }
+}

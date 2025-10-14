@@ -1,0 +1,54 @@
+[ ] Light dist isn't in world space (i.e. doesn't scale)
+[x] backface setting for materials in json
+[ ] shaders defines (shaders.json:ENV for define ENV)
+[ ] need reliable way to clear specific shader overrides (just set indices to null?)
+    if this is the case, unused indices should be used before new ones
+[|] obj mesh needs to generate tangents
+    [x] tangents for json scenes
+    [ ] generate for non-indexed meshes
+    [ ] generate for indexed meshes
+[|] python bindings
+[x] improve bump map shader
+[L] recognize blender objects linked to external files
+[|] particle system
+    [x] take code from old one, but make it shader-based
+    [x] impl particle
+    [ ] scene loading impl
+    [ ] python bindings
+    [x] xz particles/billboards - see decals for method
+    [x] fix scaling
+    [ ] improve
+[|] frustum culling
+    [|] perspective 
+        [ ] plane and frustum classes
+        [|] generation
+        [|] visibility check
+* collision
+    [L] Node-box-contains-subnodes guarentee
+        # when child added, register listener for move/add
+        # node needs vector of scoped_connections (?)
+        # flag box for recalculation on child's on_move
+[|] Allow custom materials to invoke shader swaps
+    [ ] Add a way of auto-binding uniforms (UBOs?) when materials do shader swaps
+* dist
+    [ ] get windows build
+* physics
+* input
+    [ ] Add some helper methods for grabbing+pushing controller bind mappings like in bouncingship's MenuState
+        [ ] Input needs to support rebinding and overriding
+        [ ] finish bind(...) which should sync settings between profile and input of that controller
+        [ ] rewrite reload() using meta instead of jsoncpp calls
+    [ ] double-binding (a->command, b->command) works only last bound command
+    [|] Profile config writing doesn't write arrays (?) -- probably in issue in kit not covered by tests
+        [x] yep, serialization of arrays doesn't work
+        [ ] fix in kit
+* audio
+    [ ] Sound positions seem to be wrong sometimes
+[L] BUG: when state needs_load() is false, enter() is not executed
+[L] convert tile uv generation to texture atlas
+[ ] movable text input cursor
+[ ] Bones and Animation
+[ ] SSAO
+[ ] Shadow buffer
+    [ ] need to test renderbuffers
+    [ ] shadow shader
